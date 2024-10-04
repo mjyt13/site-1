@@ -43,12 +43,24 @@ a{
     cursor:pointer;
 }
 
+a:hover, button:hover{
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+button:hover{
+    background-color: #ae67fa;
+}
+
 p{
     font-size: 16px;
     color: #fff;
 }
 
-h1{
+h1, h2{
     font-size: 62px;
     color:#ae67fa;
     font-family: "ManropeBold", sans-serif;
@@ -58,12 +70,12 @@ h1{
     -webkit-text-fill-color: transparent;
 }
 
-h2{
+h3{
     font-size: 24px;
     color: #FFFFFF;
 }
 
-h3{
+h4{
     color: #71E5FF;
     font-size: 16px;
     font-family: "Manrope", sans-serif;
@@ -115,12 +127,10 @@ section{
     align-self: center;
 }
 
-
 .header .header__menu .menu{
     display: flex;
     column-gap: 2rem;
 }
-
 
 .header .header__menu .menu .menu__item .a{
     color: #fff;
@@ -149,7 +159,7 @@ section{
     justify-content:space-between;
     column-gap: 1rem;
     min-height: 40vh;
-    margin: 14rem 0 1rem;
+    margin: 14rem 0 3rem;
 }
 
 .hero_section .hero_section__left{
@@ -205,42 +215,35 @@ section{
 
 /* секция брендов (brand section) */
 
-.brand_section{
-    margin: 2rem;
-    max-width: 1279px;
-    padding: 2rem 0;
+.brands_section {
     display: flex;
-    flex-direction:column;
+    justify-content: center;
     align-items: center;
-    row-gap: 2rem;
-    width: 100%;
-}
-
-.brand_section .brands{
-    padding: 2rem;
-    display: flex;
-    column-gap: 2rem;
-}
+    padding: 3rem 0 ;
+    column-gap: 3rem;
+  }
 
 /* секция, посвещённая объяснению (what is gpt section) */
 
 .what_is_gpt{
-    background-color: #042C54;
     display: flex;
     flex-direction: column;
+    padding: 3rem;
+    margin: 6rem 0;
+    row-gap: 7rem;
+    background: url(../assets/img/what_is_gpt_3_bg.svg) no-repeat 0 0 / cover;
 }
 
 .what_is_gpt .what_is_gpt_top{
-    margin: 3rem 3rem;
     display: flex;
-    column-gap: 3rem;
-    background: url(../assets/img/gradient_line.svg) no-repeat;
 }
 
 .what_is_gpt .what_is_gpt_top .what_is_gpt_top_header{
     padding: 1rem 0;
+    background: url(../assets/img/gradient_line.svg) no-repeat;
     max-width: 190px;
     width: 100%;
+    flex: 30%;
 }
 
 .what_is_gpt .what_is_gpt_top .what_is_gpt_top_description{
@@ -251,10 +254,9 @@ section{
 }
 
 .what_is_gpt .what_is_gpt_mid{
-    margin: 52px;
     display: flex;
-    column-gap: 2rem;
-    align-items: center;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .what_is_gpt .what_is_gpt_mid .what_is_gpt_mid_header{
@@ -268,12 +270,24 @@ section{
 .what_is_gpt .what_is_gpt_mid .what_is_gpt_mid_cta{
     font-size: 16px;
     color: #FF8A71;
-    padding: 8px;
-    margin: 0 0 0 18rem;
+    /*padding: 8px;
+    margin: 0 0 0 18rem;*/
+    border-bottom: 1px solid transparent;
+}
+
+.what_is_gpt .what_is_gpt_mid .what_is_gpt_mid_cta :hover{
+    border-bottom: 1px solid #FF8A71;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 
 .what_is_gpt .what_is_gpt_bottom{
-    margin: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .what_is_gpt .what_is_gpt_bottom .what_is_gpt_bottom_list{
@@ -513,6 +527,10 @@ section{
 
 .blog .news_image{
     width: 100%;
+}
+
+.blog .news_link{
+    font-size: 12px;
 }
 
 .blog .news_header{
